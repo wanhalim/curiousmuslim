@@ -33,6 +33,7 @@ class DisplayQuranHadith extends Component {
         <Text style={{ marginBottom: 10,color:'white', fontFamily: 'monospace'}}>Answer: {item.answer}</Text>
                                  
        <View style={{flexDirection:'row', justifyContent:'flex-end', marginTop:25}}>
+       <Text style={{ color:'white', fontFamily: 'monospace', justifyContent: 'flex-start', marginRight: 220, fontSize: 12}}>{item.date}</Text>
       <TouchableHighlight onPress={() => this.props.navigation.navigate('AnswerQuestionQuranHadith',{...item})}>
        <View style={{marginRight:15}}>
         <Icon size={30} color="white" name="edit" />

@@ -8,15 +8,18 @@ import {connect} from 'react-redux'
 // create a component
 class QuestionQuranHadith extends Component {
   state={
-      question:""
+      question:"",
+      date: ''
 
   }
 
   submit = () =>{
-      this.props.askquestionquranhadith(this.state.question)
-      this.setState({
-          question:''
-      })
+    this.setState({
+        question:'',
+        date: new Date().getDate() + "/" + (new Date().getMonth()) + "/" + new Date().getFullYear()
+    })
+      this.props.askquestionquranhadith(this.state.question, this.state.date)
+     
       this.props.navigation.navigate('NavStack')
       Alert.alert('Question successfully asked');
   }

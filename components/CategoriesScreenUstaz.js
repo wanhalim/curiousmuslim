@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, Button, Alert, ScrollView, ActivityIndicator } from 'react-native';
 import firebase from 'firebase';
 import fire from '../fb'
+import { Icon } from 'react-native-elements'
 
 
 
@@ -84,8 +85,9 @@ export default class CategoriesScreenUstaz extends Component {
              <Text></Text><Text></Text><Text></Text><Text></Text><Text></Text><Text></Text><Text></Text><Text></Text>
           <Text></Text><Text></Text><Text></Text><Text></Text><Text></Text><Text></Text><Text></Text><Text></Text>
           <Text></Text><Text></Text><Text></Text><Text></Text><Text></Text><Text></Text><Text></Text><Text></Text>
-          <Text></Text>
-          <Button color='#065C50' title="Sign out" 
+          
+          
+          <Icon name="exit-to-app"  reverse color='#065C50'
           onPress={() => Alert.alert('Are you sure','You want to sign out?',
           [
             {text: 'NO', onPress: () => console.warn('NO Pressed'), style: 'cancel'},

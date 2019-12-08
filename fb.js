@@ -1,6 +1,7 @@
 import * as firebase from 'firebase'
 
 
+
 var firebaseConfig = {
   apiKey: "AIzaSyB-gSCtHYpqeTvpUHRa9Dy9hb_AuHrYDOs",
   authDomain: "testla-a966e.firebaseapp.com",
@@ -15,6 +16,7 @@ var firebaseConfig = {
   
  let fire = firebase.initializeApp(firebaseConfig);
 
+ 
  
 
   export default fire;

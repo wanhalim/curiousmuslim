@@ -81,21 +81,21 @@ export function DisplayQuestionTawheed(){
 }
 
 
-export function askquestiontawheed(question){
+export function askquestiontawheed(question, date){
     return (dispatch) => {
-        fire.database().ref('/tawheed').push({question})
+        fire.database().ref('/tawheed').push({question, date})
     }
 }
 
-export function askquestionfiqh(question){
+export function askquestionfiqh(question, date){
     return (dispatch) => {
-        fire.database().ref('/fiqh').push({question})
+        fire.database().ref('/fiqh').push({question, date})
     }
 }
 
-export function askquestionquranhadith(question){
+export function askquestionquranhadith(question, date){
     return (dispatch) => {
-        fire.database().ref('/quranhadith').push({question})
+        fire.database().ref('/quranhadith').push({question, date})
     }
 }
 

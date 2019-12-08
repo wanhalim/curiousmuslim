@@ -8,15 +8,19 @@ import {connect} from 'react-redux'
 // create a component
 class QuestionFiqh extends Component {
   state={
-      question:""
+      question:"",
+      date: ''
 
   }
 
   submit = () =>{
-      this.props.askquestionfiqh(this.state.question)
-      this.setState({
-          question:''
-      })
+    this.setState({
+        question:'',
+        date: new Date().getDate() + "/" + (new Date().getMonth()) + "/" + new Date().getFullYear(),
+        
+    })
+      this.props.askquestionfiqh(this.state.question, this.state.date)
+     
       this.props.navigation.navigate('NavStack')
       Alert.alert('Question successfully asked');
       

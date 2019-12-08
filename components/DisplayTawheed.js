@@ -34,12 +34,14 @@ class DisplayTawheed extends Component {
         <Text style={{ marginBottom: 10, color:'white', fontFamily: 'monospace'}}>Answer: {item.answer}</Text>
           <Text></Text>                       
        <View style={{flexDirection:'row', justifyContent:'flex-end', marginTop:25}}>
+         
+       <Text style={{ color:'white', fontFamily: 'monospace', justifyContent: 'flex-start', marginRight: 220, fontSize: 12}}>{item.date}</Text>
+       
       <TouchableHighlight onPress={() => this.props.navigation.navigate('AnswerQuestionTawheed',{...item})}>
        <View style={{marginRight:15}}>
         <Icon size={30} color="white" name="edit" />
           </View>
         </TouchableHighlight>   
-
         <TouchableHighlight  onPress={() => Alert.alert(
         'Are you sure',
         'You want to delete this?',

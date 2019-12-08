@@ -1,6 +1,6 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet,TextInput, Button, Alert } from 'react-native';
+import { View, Text, StyleSheet,TextInput, Button, Alert, ImageBackground } from 'react-native';
 import {AnswerQuestionFiqh} from '../actions'
 import {connect} from 'react-redux'
 
@@ -29,14 +29,16 @@ class Edit extends Component {
 
     render() {
         return (
+            <ImageBackground source={require('../image/BACKGROUND.jpg')} style={{width: '100%', height: '100%', flex: 1}}>
     <View style={styles.container}>
         
-        <Text style={{ color:'white', fontFamily: 'monospace'}}>Question: {this.state.question}</Text>
-        <TextInput style={{marginTop:20, height:40, backgroundColor: 'rgba(0,0,0,0.35)', color:'white', fontFamily: 'monospace'}} placeholder="Answer here..." onChangeText={answer => this.setState({answer})} value={this.state.answer} />
+        <Text style={{ color:'white'}}>Question: {this.state.question}</Text>
+        <TextInput style={{marginTop:20, height:40, backgroundColor: 'rgba(0,0,0,0.35)', color:'white'}} placeholder="Answer here..." onChangeText={answer => this.setState({answer})} value={this.state.answer} />
         <Text></Text>
-     <Button title="Answer" onPress={this.submit} color='#065C50'/>
+     <Button title="Answer" onPress={this.submit} color='#264078'/>
     
     </View>
+    </ImageBackground>
         );
     }
 }
@@ -47,7 +49,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
          padding:30,
-        backgroundColor: '#04917B',
+        
     },
 });
 

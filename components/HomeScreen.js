@@ -1,6 +1,6 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet , Button, FlatList, TouchableHighlight, Dimensions, TextInput, ActivityIndicator, Image} from 'react-native';
+import { View, Text, StyleSheet , Button, FlatList, TouchableHighlight, Dimensions, TextInput, ActivityIndicator, Image, ImageBackground} from 'react-native';
 import {getBlogs, deleteBlog} from '../actions';
 import {connect} from 'react-redux'
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -43,13 +43,13 @@ class HomeScreen extends Component {
    
    renderButtonOrLoading(){
      if(this.state.loading){
-       return  <ActivityIndicator size="large" color="#00ff00" />
+       return  <ActivityIndicator size="large" color="#00C2D5" />
      }
      return <View>
        <Button 
        title="Sign In as Ustaz"
                     
-       color='#065C50'
+       color='#264078'
          onPress={this.onLoginPress.bind(this)}>
          
        </Button>
@@ -60,11 +60,12 @@ class HomeScreen extends Component {
        render() {
         
            return(
+            <ImageBackground source={require('../image/BACKGROUND.jpg')} style={{width: '100%', height: '100%', flex: 1}}>
              <View style={styles.semua}>
                    
                    <View style={styles.test1}>
    <Text></Text><Text></Text><Text></Text><Text></Text><Text></Text><Text></Text>
-                  <Image style={{width: 100, height: 100}} source={require('../image/test.png')} />
+                  <Image style={{width: 120, height: 120}} source={require('../image/appslogo2.png')} />
    <Text></Text>
                    
                    
@@ -82,6 +83,8 @@ class HomeScreen extends Component {
                        style= {styles.input}
                        placeholder={'Email'}
                        underlineColorAndroid='transparent'
+                       
+
                        />
                        <Text></Text>
                        <TextInput
@@ -91,6 +94,7 @@ class HomeScreen extends Component {
                        placeholder={'Password'}
                        secureTextEntry={true}
                        />
+                       <Text></Text>
                        <Text>{this.state.error}</Text>
                        {this.renderButtonOrLoading()}
                      <Text></Text>
@@ -98,7 +102,8 @@ class HomeScreen extends Component {
                       
                     <Button 
                       title="Ask as anonymous"
-                      color='#065C50' 
+                      color='#264078' 
+                      
                       onPress={() => this.props.navigation.navigate('CategoriesScreen')}
                      />
                      
@@ -107,7 +112,7 @@ class HomeScreen extends Component {
    
                </View>
    
-               
+               </ImageBackground>
            );
        }
    }
@@ -120,25 +125,26 @@ class HomeScreen extends Component {
          
        },
        test1: {
-         backgroundColor: '#04917B',
+         backgroundColor: 'transparent',
          
          alignItems: 'center',
          flex: 1
        },
        test2: {
-         backgroundColor: '#04917B',
+         backgroundColor: 'transparent',
          flex: 1,
          
          alignItems: 'center',
        },
        title: {
-         fontFamily: 'monospace',
+         
          fontSize: 30,
-         fontWeight: 'bold',
+         
          color: 'white'
        },
         input: {
           width: WIDTH - 55,
+          
           height: 45,
           borderRadius: 25,
           fontSize: 16,

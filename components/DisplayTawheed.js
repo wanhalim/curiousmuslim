@@ -1,9 +1,9 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet , Button, FlatList, TouchableHighlight, Alert, ActivityIndicator} from 'react-native';
+import { View, Text, StyleSheet , Button, FlatList, TouchableHighlight, Alert, ActivityIndicator, ImageBackground} from 'react-native';
 import {DisplayQuestionTawheed, deletetawheed} from '../actions';
 import {connect} from 'react-redux'
-import Icon from 'react-native-vector-icons/FontAwesome';
+import {Icon} from 'react-native-elements';
 import _ from 'lodash';
 
 
@@ -15,8 +15,9 @@ class DisplayTawheed extends Component {
   render() {
         
   return (
+    <ImageBackground source={require('../image/BACKGROUND.jpg')} style={{width: '100%', height: '100%', flex: 1}}>
    <View style={styles.container}>
-     <Button title='Edit answered question' color='#065C50' onPress={() => this.props.navigation.navigate('EditTawheed')}/>
+     <Button title='Edit answered question' color='#264078' onPress={() => this.props.navigation.navigate('EditTawheed')}/>
      <Text></Text>
      
 
@@ -29,29 +30,29 @@ class DisplayTawheed extends Component {
            
          {
            return (
-          <View style={{elevation:8, marginBottom:15,borderRadius:15, backgroundColor:'#065C50', padding:20}}>
-        <Text style={{ marginBottom: 10, color:'white', fontFamily: 'monospace'}}>Question: {item.question}</Text>
-        <Text style={{ marginBottom: 10, color:'white', fontFamily: 'monospace'}}>Answer: {item.answer}</Text>
+          <View style={{elevation:8, marginBottom:15,borderRadius:15, padding:20}}>
+        <Text style={{ marginBottom: 10, color:'white'}}>Question: {item.question}</Text>
+        <Text style={{ marginBottom: 10, color:'white'}}>Answer: {item.answer}</Text>
           <Text></Text>                       
        <View style={{flexDirection:'row', justifyContent:'flex-end', marginTop:25}}>
          
-       <Text style={{ color:'white', fontFamily: 'monospace', justifyContent: 'flex-start', marginRight: 220, fontSize: 12}}>{item.date}</Text>
+       <Text style={{ color:'white', justifyContent: 'flex-start', marginRight: 220, fontSize: 12}}>{item.date}</Text>
        
       <TouchableHighlight onPress={() => this.props.navigation.navigate('AnswerQuestionTawheed',{...item})}>
        <View style={{marginRight:15}}>
-        <Icon size={30} color="white" name="edit" />
+       <Icon reverse color="#264078" name="create" />
           </View>
         </TouchableHighlight>   
         <TouchableHighlight  onPress={() => Alert.alert(
         'Are you sure',
         'You want to delete this?',
         [
-          {text: 'NO', onPress: () => console.warn('NO Pressed'), style: 'cancel'},
+          {text: 'NO', style: 'cancel'},
           {text: 'YES', onPress: () => this.props.deletetawheed(item.key)},
         ]
       )} >
      <View>
-       <Icon size={30} color="white" name="close" />
+     <Icon reverse color="#264078" name="highlight-off"  />
         </View>
        </TouchableHighlight>   
        
@@ -67,6 +68,7 @@ class DisplayTawheed extends Component {
                 }
                
             </View>
+            </ImageBackground>
         );
     }
 }
@@ -77,7 +79,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         
-        backgroundColor: '#04917B',
+        
         padding:10
     },
 });

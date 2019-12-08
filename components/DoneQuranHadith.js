@@ -1,6 +1,6 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet , Button, FlatList, TouchableHighlight, ActivityIndicator} from 'react-native';
+import { View, Text, StyleSheet , Button, FlatList, TouchableHighlight, ActivityIndicator, ImageBackground} from 'react-native';
 import {DisplayQuestionQuranHadith, deleteBlog} from '../actions';
 import {connect} from 'react-redux'
 
@@ -29,6 +29,7 @@ class DisplayQuranHadith extends Component {
         }
     )
   return (
+    <ImageBackground source={require('../image/BACKGROUND.jpg')} style={{width: '100%', height: '100%', flex: 1}}>
    <View style={styles.container}>
        <Text></Text>
        
@@ -41,7 +42,7 @@ class DisplayQuranHadith extends Component {
                     />
                     
      {
-      this.props.loadingReducer ? <ActivityIndicator size="large" color="#00ff00" /> : <FlatList style={{width:'100%'}} 
+      this.props.loadingReducer ? <ActivityIndicator size="large" color="#00C2D5" /> : <FlatList style={{width:'100%'}} 
         data={filteredQuestion}
        keyExtractor={(item) => item.key}
          showsVerticalScrollIndicator={false}
@@ -49,16 +50,17 @@ class DisplayQuranHadith extends Component {
              
          {
            return (
-          <View style={{elevation:8, marginBottom:15,borderRadius:15, backgroundColor:'#065C50', padding:20}}>
-        <Text style={{ marginBottom: 10,color:'white', fontFamily: 'monospace'}}>Question: {item.question}</Text>
-        <Text style={{ marginBottom: 10,color:'white', fontFamily: 'monospace'}}>Answer: {item.answer}</Text>
+          <View style={{elevation:8, marginBottom:15,borderRadius:15, padding:20, borderWidth:10}}>
+        <Text style={{ marginBottom: 10,color:'white'}}>Question: {item.question}</Text>
+        <Text style={{ marginBottom: 10,color:'white'}}>Answer: {item.answer}</Text>
         <View style={{flexDirection:'row', justifyContent:'flex-start', marginTop:25}}>
-       <Text style={{ color:'white', fontFamily: 'monospace', fontSize: 12}}>{item.date}</Text>
+       <Text style={{ color:'white', fontSize: 12}}>{item.date}</Text>
        </View>
         
                                  
        
                             </View>
+                            
                          )
          }}
         else{
@@ -75,11 +77,12 @@ bottom: 10,
 right: 10, }}>
                 
        
-        <Icon reverse color='#065C50' name="question-answer" onPress={() => this.props.navigation.navigate('QuestionQuranHadith')}/>
+        <Icon reverse color='#264078' name="create" onPress={() => this.props.navigation.navigate('QuestionQuranHadith')}/>
           
           
         </View>
             </View>
+            </ImageBackground>
         );
     }
 }
@@ -89,7 +92,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         
-        backgroundColor: '#04917B',
+        backgroundColor: 'transparent',
         padding:10
     },
 });

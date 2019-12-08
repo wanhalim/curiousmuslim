@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Button, Alert, ScrollView, ActivityIndicator } from 'react-native';
+import { StyleSheet, Text, View, Button, Alert, ScrollView, ActivityIndicator, ImageBackground } from 'react-native';
 import firebase from 'firebase';
 import fire from '../fb'
 import { Icon } from 'react-native-elements'
@@ -68,33 +68,22 @@ export default class CategoriesScreenUstaz extends Component {
     renderTry (){
       if(this.state.loading){
        return <View>
-         <Text></Text>
-               <Text style={{ color:'white', fontFamily: 'monospace', textAlign:'center'}}>WELCOME,</Text>
-               <Text style={{ color:'white', fontFamily: 'monospace', textAlign:'center'}}>YOU ARE SIGNED IN!</Text>
+         <Text></Text><Text></Text><Text></Text><Text></Text><Text></Text>
+               <Text style={{ color:'white',  textAlign:'center',  fontSize:19}}>WELCOME,</Text>
+               <Text style={{ color:'white',  textAlign:'center',  fontSize:19}}>YOU ARE SIGNED IN!</Text>
                <Text></Text>
-       <ActivityIndicator size="large" color="#00ff00" />
+               <Text></Text><Text></Text><Text></Text>
+       <ActivityIndicator size="large" color="#00C2D5" />
        </View>
           }
            return <View>
-      <Text></Text>
-               <Text style={{ color:'white', fontFamily: 'monospace', textAlign:'center'}}>WELCOME,</Text>
-               <Text style={{ color:'white', fontFamily: 'monospace', textAlign:'center'}}>YOU ARE SIGNED IN!</Text>
+      <Text></Text><Text></Text><Text></Text><Text></Text><Text></Text>
+               <Text style={{ color:'white',  textAlign:'center',  fontSize:19}}>WELCOME,</Text>
+               <Text style={{ color:'white',  textAlign:'center',  fontSize:19}}>YOU ARE SIGNED IN!</Text>
                <Text></Text>
-              
-             <Button title='CONTINUE TO QUESTIONS' onPress={() => this.try()}  color='#065C50'/>
-             <Text></Text><Text></Text><Text></Text><Text></Text><Text></Text><Text></Text><Text></Text><Text></Text>
-          <Text></Text><Text></Text><Text></Text><Text></Text><Text></Text><Text></Text><Text></Text><Text></Text>
-          <Text></Text><Text></Text><Text></Text><Text></Text><Text></Text><Text></Text><Text></Text><Text></Text>
-          
-          
-          <Icon name="exit-to-app"  reverse color='#065C50'
-          onPress={() => Alert.alert('Are you sure','You want to sign out?',
-          [
-            {text: 'NO', onPress: () => console.warn('NO Pressed'), style: 'cancel'},
-            {text: 'YES', onPress: () => this.signOutUser()},
-          ]
-                    )} 
-          />  
+               <Text></Text><Text></Text><Text></Text>
+             <Button title='CONTINUE TO QUESTIONS' onPress={() => this.try()}  color='#264078'/>
+             
           </View>
     }
 //     renderButton () {
@@ -103,7 +92,7 @@ export default class CategoriesScreenUstaz extends Component {
 //       }
 //       if(this.state.fiqh){
 //         return <View>
-//           <Text style={{ color:'white', fontFamily: 'monospace', textAlign:'center'}}>PRESS TO CONTINUE TO FIQH PAGE</Text>
+//           <Text style={{ color:'white',  textAlign:'center'}}>PRESS TO CONTINUE TO FIQH PAGE</Text>
 //          <Text></Text><Text></Text><Text></Text>
 //           <Button
 //         color='#065C50'
@@ -129,7 +118,7 @@ export default class CategoriesScreenUstaz extends Component {
 //         </View>
 //       }if (this.state.hadith) {
 //        return <View>
-//          <Text style={{ color:'white', fontFamily: 'monospace', textAlign:'center'}}>PRESS TO CONTINUE TO QURAN AND HADITH PAGE</Text>
+//          <Text style={{ color:'white',  textAlign:'center'}}>PRESS TO CONTINUE TO QURAN AND HADITH PAGE</Text>
 //          <Text></Text><Text></Text><Text></Text>
 //        <Button
 //                 color='#065C50'
@@ -154,7 +143,7 @@ export default class CategoriesScreenUstaz extends Component {
 //           </View>
 //       }if (this.state.tawheed){
 //        return <View >
-//          <Text style={{ color:'white', fontFamily: 'monospace', textAlign:'center'}}>PRESS TO CONTINUE TO TAWHEED PAGE</Text>
+//          <Text style={{ color:'white',  textAlign:'center'}}>PRESS TO CONTINUE TO TAWHEED PAGE</Text>
 //          <Text></Text><Text></Text><Text></Text>
 //        <Button
 //         color='#065C50'
@@ -179,7 +168,7 @@ export default class CategoriesScreenUstaz extends Component {
 //   </View>
 //       }if (this.state.all){
 //        return <View>
-//          <Text style={{ color:'white', fontFamily: 'monospace', textAlign:'center'}}>WHICH CATEGORY OF QUESTIONS YOU WISH TO ANSWER</Text>
+//          <Text style={{ color:'white',  textAlign:'center'}}>WHICH CATEGORY OF QUESTIONS YOU WISH TO ANSWER</Text>
 //          <Text></Text><Text></Text><Text></Text>
 //          <Button
 //                 color='#065C50'
@@ -228,14 +217,32 @@ export default class CategoriesScreenUstaz extends Component {
      
     render() {
         return(
-<ScrollView style={styles.semua}>
+          <ImageBackground source={require('../image/BACKGROUND.jpg')} style={{width: '100%', height: '100%', flex: 1}}>
+<ScrollView >
             
             <View style={styles.semua}>
                {/* <Text></Text>
                {this.renderButton()} */}
                {this.renderTry()}
             </View>
+            <Text></Text><Text></Text><Text></Text><Text></Text><Text></Text><Text></Text><Text></Text><Text></Text>
+          <Text></Text><Text></Text><Text></Text>
+          
+          <View style={{flexDirection:'row', justifyContent:'flex-end'}}>
+        
+          <Icon name="exit-to-app"  reverse color='#264078'
+          onPress={() => Alert.alert('Are you sure','You want to sign out?',
+          [
+            {text: 'NO', style: 'cancel'},
+            {text: 'YES', onPress: () => this.signOutUser()},
+          ]
+                    )} 
+          />  
+          
+          </View>
+          
             </ScrollView>
+            </ImageBackground>
         );
     }
 }
@@ -243,7 +250,7 @@ export default class CategoriesScreenUstaz extends Component {
 const styles = StyleSheet.create({
 
     semua: {
-        backgroundColor: '#04917B',
+      padding: 50,
         flex: 1
        
         

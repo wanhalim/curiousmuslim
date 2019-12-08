@@ -42,12 +42,12 @@ const NavStack =createStackNavigator({
             headerLeft: null,
             header: null,
             headerStyle: {
-                backgroundColor: '#065C50',
+                backgroundColor: '#264078',
                 
               },
               headerTitleStyle: {
-                fontWeight: 'bold',
-                fontFamily: 'monospace'
+                
+                
                 
               },
               headerTintColor: 'white'
@@ -58,12 +58,12 @@ const NavStack =createStackNavigator({
         navigationOptions:() => ({
             headerTitle:"Blogs",
             headerStyle: {
-                backgroundColor: '#065C50',
+                backgroundColor: '#264078',
                 
               },
               headerTitleStyle: {
-                fontWeight: 'bold',
-                fontFamily: 'monospace'
+                
+                
                 
               },
               headerTintColor: 'white'
@@ -74,13 +74,14 @@ const NavStack =createStackNavigator({
         screen:CategoriesScreen,
         navigationOptions:() => ({
             headerTitle:"ANONYMOUS",
+            
             headerStyle: {
-                backgroundColor: '#065C50',
+                backgroundColor: '#264078',
                 
               },
               headerTitleStyle: {
-                fontWeight: 'bold',
-                fontFamily: 'monospace'
+                
+                
                 
               },
               headerTintColor: 'white'
@@ -93,12 +94,12 @@ const NavStack =createStackNavigator({
             headerTitle:"HOME",
             headerLeft: null,
             headerStyle: {
-                backgroundColor: '#065C50',
+                backgroundColor: '#264078',
                 
               },
               headerTitleStyle: {
-                fontWeight: 'bold',
-                fontFamily: 'monospace'
+                
+                
                 
               },
               headerTintColor: 'white'
@@ -109,12 +110,12 @@ const NavStack =createStackNavigator({
         navigationOptions:() => ({
             headerTitle:"TAWHEED",
             headerStyle: {
-                backgroundColor: '#065C50',
+                backgroundColor: '#264078',
                 
               },
               headerTitleStyle: {
-                fontWeight: 'bold',
-                fontFamily: 'monospace'
+                
+                
                 
               },
               headerTintColor: 'white'
@@ -125,12 +126,12 @@ const NavStack =createStackNavigator({
         navigationOptions:() => ({
             headerTitle:"FIQH",
             headerStyle: {
-                backgroundColor: '#065C50',
+                backgroundColor: '#264078',
                 
               },
               headerTitleStyle: {
-                fontWeight: 'bold',
-                fontFamily: 'monospace'
+                
+                
                 
               },
               headerTintColor: 'white'
@@ -141,12 +142,12 @@ const NavStack =createStackNavigator({
         navigationOptions:() => ({
             headerTitle:"QURAN & HADITH",
             headerStyle: {
-                backgroundColor: '#065C50',
+                backgroundColor: '#264078',
                 
               },
               headerTitleStyle: {
-                fontWeight: 'bold',
-                fontFamily: 'monospace'
+                
+                
                 
               },
               headerTintColor: 'white'
@@ -157,12 +158,12 @@ const NavStack =createStackNavigator({
         navigationOptions:() => ({
             headerTitle:"FIQH",
             headerStyle: {
-                backgroundColor: '#065C50',
+                backgroundColor: '#264078',
                 
               },
               headerTitleStyle: {
-                fontWeight: 'bold',
-                fontFamily: 'monospace'
+                
+                
                 
               },
               headerTintColor: 'white'
@@ -173,12 +174,12 @@ const NavStack =createStackNavigator({
         navigationOptions:() => ({
             headerTitle:"QURAN & HADITH",
             headerStyle: {
-                backgroundColor: '#065C50',
+                backgroundColor: '#264078',
                 
               },
               headerTitleStyle: {
-                fontWeight: 'bold',
-                fontFamily: 'monospace'
+                
+                
                 
               },
               headerTintColor: 'white'
@@ -189,12 +190,12 @@ const NavStack =createStackNavigator({
         navigationOptions:() => ({
             headerTitle:"TAWHEED",
             headerStyle: {
-                backgroundColor: '#065C50',
+                backgroundColor: '#264078',
                 
               },
               headerTitleStyle: {
-                fontWeight: 'bold',
-                fontFamily: 'monospace'
+                
+                
                 
               },
               headerTintColor: 'white'
@@ -205,12 +206,12 @@ const NavStack =createStackNavigator({
         navigationOptions:() => ({
             headerTitle:"FIQH",
             headerStyle: {
-                backgroundColor: '#065C50',
+                backgroundColor: '#264078',
                 
               },
               headerTitleStyle: {
-                fontWeight: 'bold',
-                fontFamily: 'monospace'
+                
+                
                 
               },
               headerTintColor: 'white'
@@ -221,12 +222,12 @@ const NavStack =createStackNavigator({
         navigationOptions:() => ({
             headerTitle:"QURAN & HADITH",
             headerStyle: {
-                backgroundColor: '#065C50',
+                backgroundColor: '#264078',
                 
               },
               headerTitleStyle: {
-                fontWeight: 'bold',
-                fontFamily: 'monospace'
+                
+                
                 
               },
               headerTintColor: 'white'
@@ -237,12 +238,12 @@ const NavStack =createStackNavigator({
         navigationOptions:() => ({
             headerTitle:"TAWHEED",
             headerStyle: {
-                backgroundColor: '#065C50',
+                backgroundColor: '#264078',
                 
               },
               headerTitleStyle: {
-                fontWeight: 'bold',
-                fontFamily: 'monospace'
+                
+                
                 
               },
               headerTintColor: 'white'
@@ -253,12 +254,12 @@ const NavStack =createStackNavigator({
         navigationOptions:() => ({
             headerTitle:"FIQH",
             headerStyle: {
-                backgroundColor: '#065C50',
+                backgroundColor: '#264078',
                 
               },
               headerTitleStyle: {
-                fontWeight: 'bold',
-                fontFamily: 'monospace'
+                
+                
                 
               },
               headerTintColor: 'white'
@@ -269,12 +270,12 @@ const NavStack =createStackNavigator({
         navigationOptions:() => ({
             headerTitle:"QURAN & HADITH",
             headerStyle: {
-                backgroundColor: '#065C50',
+                backgroundColor: '#264078',
                 
               },
               headerTitleStyle: {
-                fontWeight: 'bold',
-                fontFamily: 'monospace'
+                
+                
                 
               },
               headerTintColor: 'white'
@@ -285,12 +286,12 @@ const NavStack =createStackNavigator({
         navigationOptions:() => ({
             headerTitle:"TAWHEED",
             headerStyle: {
-                backgroundColor: '#065C50',
+                backgroundColor: '#264078',
                 
               },
               headerTitleStyle: {
-                fontWeight: 'bold',
-                fontFamily: 'monospace'
+                
+                
                 
               },
               headerTintColor: 'white'
@@ -301,12 +302,12 @@ const NavStack =createStackNavigator({
       navigationOptions:() => ({
           headerTitle:"FIQH",
           headerStyle: {
-              backgroundColor: '#065C50',
+              backgroundColor: '#264078',
               
             },
             headerTitleStyle: {
-              fontWeight: 'bold',
-              fontFamily: 'monospace'
+              
+              
               
             },
             headerTintColor: 'white'
@@ -317,12 +318,12 @@ const NavStack =createStackNavigator({
     navigationOptions:() => ({
         headerTitle:"QURAN & HADITH",
         headerStyle: {
-            backgroundColor: '#065C50',
+            backgroundColor: '#264078',
             
           },
           headerTitleStyle: {
-            fontWeight: 'bold',
-            fontFamily: 'monospace'
+            
+            
             
           },
           headerTintColor: 'white'
@@ -333,12 +334,12 @@ EditTawheed:{
   navigationOptions:() => ({
       headerTitle:"TAWHEED",
       headerStyle: {
-          backgroundColor: '#065C50',
+          backgroundColor: '#264078',
           
         },
         headerTitleStyle: {
-          fontWeight: 'bold',
-          fontFamily: 'monospace'
+          
+          
           
         },
         headerTintColor: 'white'

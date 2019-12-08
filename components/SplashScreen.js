@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import firebase from '../fb'
-import {Text, Alert, StyleSheet, View, Image} from 'react-native'
+import {Text, Alert, StyleSheet, View, Image, ImageBackground} from 'react-native'
 
 class SplashScreen extends Component {
     
@@ -22,9 +22,11 @@ class SplashScreen extends Component {
 
 render(){
     return (
+      <ImageBackground source={require('../image/BACKGROUND.jpg')} style={{width: '100%', height: '100%', flex: 1}}>
         <View style={styles.semua}>
-          <Image style={{width: 100, height: 100}} source={require('../image/test.png')} />
+          <Image style={{width: 200, height: 200}} source={require('../image/appslogo2.png')} />
         </View>
+        </ImageBackground>
     )
 }
 }
@@ -34,7 +36,7 @@ const styles = StyleSheet.create({
   semua: {
       
     flex: 1,
-    backgroundColor: '#04917B',
+    backgroundColor: 'transparent',
     justifyContent: 'center',
     alignItems: 'center',
     
